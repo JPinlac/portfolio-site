@@ -3,12 +3,18 @@
     =====================*/
 
 body{
-    padding: 0 1.5em;
+    padding: 0 4%;
     font-family: 'Inconsolata', 'Courier New', monospace;
     background-color: #FEF0D6;
     color: #3F4D58;
 }
 
+a:link, a:visited {
+    color: #3F4D58;
+}
+a:hover {
+    opacity: .7;
+}
 
 /* =====================
     Module level styling
@@ -88,13 +94,9 @@ body{
     list-style-type: none;
 }
 
-a:link, a:visited {
-    color: #3F4D58;
-}
-
 #navbar a {
     display: block;
-    width: 100px;
+    width: 6.25em;
     height: 2.5em;
     padding: 0 5px;
     line-height: 2.5em;
@@ -140,7 +142,6 @@ nav ul{
     #title-desc {
         padding-left: 1em;
     }
-
 }
 
 /* ---------------------
