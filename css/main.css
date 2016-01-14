@@ -55,12 +55,12 @@ body{
     animation: type 3s steps(37,end);
 }
 @-webkit-keyframes "type" { 
-  from { width: 100%; }
-  to{width: 0}
+    from {width: 100%;}
+    to {width: 0;}
 } 
 @keyframes "type" { 
-  from { width: 100%; }
-  to{width: 0}
+    from {width: 100%;}
+    to {width: 0;}
 } 
 
 
@@ -75,20 +75,12 @@ body{
     left: 1px;
 }
 @-webkit-keyframes "blink" {
-  from,to {
-  background-color: transparent;
-}
- 50% {
-   background-color: #3F4D58;
- }
+    from,to {background-color: transparent;}
+    50% {background-color: #3F4D58;}
 }
 @keyframes "blink" {
-  from,to {
-  background-color: transparent;
-}
- 50% {
-  background-color: #3F4D58;
- }
+    from,to {background-color: transparent;}
+    50% {background-color: #3F4D58;}
 }
 
 #navbar li{
@@ -134,8 +126,8 @@ nav ul{
         border-right: none;
     }
     #navbar li + li:before {
-    content: " | ";
-    padding: 0 1em;
+        content: " | ";
+        padding: 0 1em;
     }
 }
 
