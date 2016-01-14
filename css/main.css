@@ -1,32 +1,156 @@
-/* 
+/* =====================
     Document level styling
-*/
+    =====================*/
 
 body{
-    padding: 0 20px;
+    padding: 0 1.5em;
     font-family: 'Inconsolata', 'Courier New', monospace;
+    background-color: #FEF0D6;
+    color: #3F4D58;
 }
 
 
-/*
+/* =====================
     Module level styling
-*/
+    =====================*/
 
 
-/*
+/* =====================
     Element level styling
-*/
+    =====================*/
 
-/* Nav */
-nav li{
+/* ---------------------
+    Masthead
+    ---------------------*/
+#navbar {
+    display:flex;
+    align-items: center;
+    flex-flow: column wrap;
+    text-align: center;
+}
+
+#title {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+#navbar p {
+    padding-right: .6rem;
+    margin: 0;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    position: relative;
+}
+
+/*typing effect*/
+#type-helper{
+    padding:.1em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    background: #FEF0D6;
+    box-sizing: border-box;
+    animation: type 3s steps(37,end);
+}
+@-webkit-keyframes "type" { 
+  from { width: 100%; }
+  to{width: 0}
+} 
+@keyframes "type" { 
+  from { width: 100%; }
+  to{width: 0}
+} 
+
+
+/*adds blinking cursor*/
+.blinking {
+    display: inline-block;
+    width: .4rem;
+    height: 1rem;
+    animation: 2s blink step-end infinite;
+    position: relative;
+    top: 2px;
+    left: 1px;
+}
+@-webkit-keyframes "blink" {
+  from,to {
+  background-color: transparent;
+}
+ 50% {
+   background-color: #3F4D58;
+ }
+}
+@keyframes "blink" {
+  from,to {
+  background-color: transparent;
+}
+ 50% {
+  background-color: #3F4D58;
+ }
+}
+
+#navbar li{
     display: inline-block;
     list-style-type: none;
 }
-nav li + li:before {
-    content: " | ";
-    padding: 0 15px;
+
+a:link, a:visited {
+    color: #3F4D58;
 }
 
-nav a{
-    
+#navbar a {
+    display: block;
+    width: 100px;
+    height: 2.5em;
+    padding: 0 5px;
+    line-height: 2.5em;
+    border-bottom: 1px solid #cbc0ab;
+    border-right: 1px solid #cbc0ab;
+    text-decoration: none;
 }
+
+/*corrects user agent styling*/
+nav ul{
+    margin: 0;
+    margin-left: -40px;
+}
+
+
+@media screen and (min-width: 33em){
+    #navbar {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        align-content: flex-end;
+    }
+    .brand {
+        text-align: left;
+    }
+    #navbar a {
+        line-height: 2.5em;
+        display:inline;
+        border-right: none;
+    }
+    #navbar li + li:before {
+    content: " | ";
+    padding: 0 1em;
+    }
+}
+
+@media screen and (min-width: 50em){
+    .brand {
+        display:flex;
+        flex-direction: rows;
+        align-items: baseline;
+    }
+    #title-desc {
+        padding-left: 1em;
+    }
+
+}
+
+/* ---------------------
+    Masthead end
+    ---------------------*/
