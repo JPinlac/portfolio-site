@@ -1,16 +1,17 @@
 /* =====================
     Document level styling
     =====================*/
-
-body{
-    padding: 0 4%;
+body {
     font-family: 'Inconsolata', 'Courier New', monospace;
-    background-color: #FEF0D6;
-    color: #3F4D58;
+    background-color: #02222B; /*#FEF0D6;*/
+    color: #55C34D; /*#3F4D58;*/
 }
-
+p{
+    margin: 0;
+    padding: 0;
+}
 a:link, a:visited {
-    color: #3F4D58;
+    color: #55C34D;
 }
 a:hover {
     opacity: .7;
@@ -33,6 +34,7 @@ a:hover {
     align-items: center;
     flex-flow: column wrap;
     text-align: center;
+    padding: 0 1em 1em 1em;
 }
 
 #title {
@@ -43,7 +45,7 @@ a:hover {
 
 #navbar p {
     padding-right: .6rem;
-    margin: 0;
+    margin-top: 0;
     margin-bottom: 8px;
     white-space: nowrap;
     position: relative;
@@ -56,7 +58,7 @@ a:hover {
     top: 0;
     right: 0;
     width: 0;
-    background: #FEF0D6;
+    background: #02222B;
     box-sizing: border-box;
     animation: type 3s steps(37,end);
 }
@@ -82,11 +84,11 @@ a:hover {
 }
 @-webkit-keyframes "blink" {
     from,to {background-color: transparent;}
-    50% {background-color: #3F4D58;}
+    50% {background-color: #55C34D;}
 }
 @keyframes "blink" {
     from,to {background-color: transparent;}
-    50% {background-color: #3F4D58;}
+    50% {background-color: #55C34D;}
 }
 
 #navbar li{
@@ -100,8 +102,8 @@ a:hover {
     height: 2.5em;
     padding: 0 5px;
     line-height: 2.5em;
-    border-bottom: 1px solid #cbc0ab;
-    border-right: 1px solid #cbc0ab;
+    border-bottom: 1px solid #074354;
+    border-right: 1px solid #074354;
     text-decoration: none;
 }
 
@@ -140,10 +142,36 @@ nav ul{
         align-items: baseline;
     }
     #title-desc {
-        padding-left: 1em;
+        margin-left: 1em;
     }
 }
 
 /* ---------------------
-    Masthead end
+    Intro
     ---------------------*/
+#intro {
+    height: 78vh;
+    background: #053542;
+    padding: 4%;
+}
+#intro p, #intro h1 {
+    color: #FFFFFF;
+}
+.shape {
+    shape-outside: polygon(68% 0, 100% 0, 100% 6%, 8% 100%, 0 100%, 0 66%);
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+@media screen and (min-width: 33em){
+    #intro{
+        height: 82vh;
+    }
+
+}
+@media screen and (min-width: 50em){
+    #intro{
+        height: 86vh;
+    }
+}
