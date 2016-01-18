@@ -118,7 +118,7 @@ nav ul{
     #navbar {
         flex-flow: row wrap;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
         align-content: flex-end;
     }
     .brand {
@@ -152,10 +152,19 @@ nav ul{
 #intro {
     height: 78vh;
     background: #053542;
-    padding: 4%;
+    padding: 1em;
+    position:relative;
 }
 #intro p, #intro h1 {
     color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+}
+#intro h1 {
+    position:absolute;
+    top: 1em;
+    left: 1em;
+    font-weight: 700;
 }
 .shape {
     shape-outside: polygon(68% 0, 100% 0, 100% 6%, 8% 100%, 0 100%, 0 66%);
