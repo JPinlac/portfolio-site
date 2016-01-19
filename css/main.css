@@ -35,6 +35,7 @@ a:hover {
     flex-flow: column wrap;
     text-align: center;
     padding: 0 1em 1em 1em;
+    height: 100vh;
 }
 
 #title {
@@ -153,21 +154,22 @@ nav ul{
     position: relative;
     display: flex;
     flex-flow: column wrap;
+    background: #053542;
+    color: #FFFFFF;
 }
 #intro p, #intro h1 {
-
-    color: #FFFFFF;
-    background: #053542;
-}
-#intro p {
+    height: 39vh;
+    padding: 0 1em;
 }
 #intro h1 {
     font-weight: 700;
 }
+#intro p {
+}
 
 @media screen and (min-width: 33em){
     #intro{
-        flex-flow: row no-wrap;
+        flex-flow: row wrap;
         height: 41vh;
     }
     .intro1, .intro2 {
