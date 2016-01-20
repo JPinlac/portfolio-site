@@ -36,8 +36,12 @@ a:hover {
     text-align: center;
     padding: 0 1em 1em 1em;
     height: 100vh;
+    background: #060606;
     transition: background 1s;
     justify-content: center;
+}
+#navbar.normal{
+    background: #02222B;
 }
 
 #title {
@@ -45,11 +49,12 @@ a:hover {
     margin-bottom: 10px;
     white-space: nowrap;
 }
-#title, #navbar a {
-    visibility: hidden;
+#title{
+    opacity: 0;
+    transition: opacity 1s;
 }
 .show {
-    visibility: visible !important;
+    opacity:1 !important;
 }
 
 #navbar p {
@@ -67,9 +72,12 @@ a:hover {
     top: 0;
     right: 0;
     width: 0;
-    background: #02222B;
+    background: #060606;
     box-sizing: border-box;
     animation: type 3s steps(37,end);
+}
+#type-helper.normal{
+    background: #02222B;
 }
 @-webkit-keyframes "type" { 
     from {width: 100%;}
@@ -120,15 +128,14 @@ a:hover {
 nav ul{
     margin: 0;
     margin-left: -40px;
+    opacity: 0;
+    transition: opacity 1s cubic-bezier(.90, .08, 1, .14);
 }
-
 
 @media screen and (min-width: 33em){
     #navbar {
         flex-flow: row wrap;
         justify-content: space-between;
-        align-items: flex-end;
-        align-items: center;
     }
     .brand {
         text-align: left;
@@ -139,16 +146,10 @@ nav ul{
         border-right: none;
     }
     #navbar li + li:before {
-        content: attr(data-content);
+        content: ' | ';
         padding: 0 1em;
-        /*visibility: hidden;*/
-        /*animation: divider 0s ease-in 2.1s forwards;*/ /* css timeout since jquery can't target :before */
     }
-    @keyframes divider {
-        to {
-            visibility: visible;
-        }
-    }
+
 }
 
 @media screen and (min-width: 50em){
@@ -161,6 +162,7 @@ nav ul{
         margin-left: 1em;
     }
 }
+
 
 /* ---------------------
     Intro
