@@ -36,12 +36,21 @@ a:hover {
     text-align: center;
     padding: 0 1em 1em 1em;
     height: 100vh;
+    transition: background 1s;
+    justify-content: center;
 }
 
 #title {
     font-size: 1.4em;
     margin-bottom: 10px;
     white-space: nowrap;
+}
+#title, #navbar a {
+    visibility: hidden;
+}
+#title.show {
+    transition: 5s;
+    visibility: visible !important;
 }
 
 #navbar p {
@@ -133,6 +142,7 @@ nav ul{
     #navbar li + li:before {
         content: " | ";
         padding: 0 1em;
+        visibility: hidden;
     }
 }
 
