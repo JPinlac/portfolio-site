@@ -5,8 +5,16 @@ var autoHeight = $('#navbar').css('height', 'auto').height();
 $('#navbar').delay(3000).height(curHeight).animate({height: autoHeight}, 1000, function(){
   $(this).removeAttr('style');
   $(this).css('height', 'auto');
+  if ($(window).width() / parseFloat($('body').css('font-size')) >= 33){
+    $(this).css('align-items', 'flex-end');
+  }
 });
-$('#title, .navbar ul').delay(3000).queue(function(next){
+$('#title, #navbar a').delay(4000).queue(function(next){
   $(this).addClass('show');
+  next();
+});
+
+$('#navbar li + li').delay(4000).queue(function(next){
+  $(this).attr('data-content', ' | ');
   next();
 });

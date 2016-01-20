@@ -48,8 +48,7 @@ a:hover {
 #title, #navbar a {
     visibility: hidden;
 }
-#title.show {
-    transition: 5s;
+.show {
     visibility: visible !important;
 }
 
@@ -129,7 +128,7 @@ nav ul{
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: flex-end;
-        align-content: flex-end;
+        align-items: center;
     }
     .brand {
         text-align: left;
@@ -140,9 +139,15 @@ nav ul{
         border-right: none;
     }
     #navbar li + li:before {
-        content: " | ";
+        content: attr(data-content);
         padding: 0 1em;
-        visibility: hidden;
+        /*visibility: hidden;*/
+        /*animation: divider 0s ease-in 2.1s forwards;*/ /* css timeout since jquery can't target :before */
+    }
+    @keyframes divider {
+        to {
+            visibility: visible;
+        }
     }
 }
 
