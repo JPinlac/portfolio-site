@@ -176,9 +176,12 @@ nav ul{
 }
 #intro p, #intro h1 {
     height: 39vh;
+    margin: 0;
     padding: 0 1em;
+    background: gray;
 }
 #intro h1 {
+    margin-right: auto;
     font-weight: 700;
 }
 #intro p {
