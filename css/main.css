@@ -91,7 +91,6 @@ a:hover {
     to {width: 0;}
 } 
 
-
 /*adds blinking cursor*/
 .blinking {
     display: inline-block;
@@ -178,14 +177,19 @@ nav ul{
     color: #FFFFFF;
 }
 #intro p, #intro h1 {
-    height: 39vh;
     margin: 0;
-    padding: 0 1em;
+    padding: 1em;
     background: gray;
+    /*width: 100%;*/
 }
 #intro h1 {
-    margin-right: auto;
+    width: 100%;
+    text-align: right;
+    display: flex;
+    /*justify-content: flex-end;*/
+    align-items: center;
     font-weight: 700;
+    height: 39vh;
 }
 #intro p {
 }
@@ -194,13 +198,14 @@ nav ul{
     #intro{
         flex-flow: row wrap;
         height: 41vh;
+        align-items: baseline;
     }
     .intro1, .intro2 {
-        width:48%;
+        width:50%;
     }
 }
 @media screen and (min-width: 50em){
     #intro{
-        height: 43vh;
+        /*height: 43vh;*/
     }
 }
