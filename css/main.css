@@ -3,15 +3,15 @@
     =====================*/
 body {
     font-family: 'Inconsolata', 'Courier New', monospace;
-    background-color: #02222B; /*#FEF0D6;*/
-    color: #55C34D; /*#3F4D58;*/
+    background-color: #ececec; /*#FEF0D6;*/
+    color: #333; /*#3F4D58;*/
 }
 p{
     margin: 0;
     padding: 0;
 }
 a:link, a:visited {
-    color: #55C34D;
+    color: #333;
 }
 a:hover {
     opacity: .7;
@@ -39,9 +39,11 @@ a:hover {
     background: #060606;
     transition: background 1s;
     justify-content: center;
+    color: #55C34D;
 }
 #navbar.normal{
-    background: #02222B;
+    background: #ececec;
+    color: #333;
 }
 
 #title {
@@ -75,9 +77,10 @@ a:hover {
     background: #060606;
     box-sizing: border-box;
     animation: type 3s steps(37,end);
+    transition: background 1s;
 }
 #type-helper.normal{
-    background: #02222B;
+    background: #ececec;
 }
 @-webkit-keyframes "type" { 
     from {width: 100%;}
@@ -101,11 +104,11 @@ a:hover {
 }
 @-webkit-keyframes "blink" {
     from,to {background-color: transparent;}
-    50% {background-color: #55C34D;}
+    50% {background-color: #333;}
 }
 @keyframes "blink" {
     from,to {background-color: transparent;}
-    50% {background-color: #55C34D;}
+    50% {background-color: #333;}
 }
 
 #navbar li{
