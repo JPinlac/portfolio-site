@@ -3,8 +3,8 @@
     =====================*/
 body {
     font-family: 'Inconsolata', 'Courier New', monospace;
-    background-color: #ececec; /*#FEF0D6;*/
-    color: #333; /*#3F4D58;*/
+    background-color: #ececec;
+    color: #333;
 }
 
 a:link, a:visited {
@@ -126,9 +126,6 @@ nav ul{
     opacity: 0;
     transition: opacity 1s cubic-bezier(.90, .08, 1, .14);
 }
-#navbar.sticky ul {
-    /*margin-right: calc(1em + 17px);*/
-}
 
 @media screen and (min-width: 33em){
     #navbar {
@@ -179,41 +176,39 @@ nav ul{
     color: #FFFFFF;
     font-family: Arial;
 }
-.intro1, .intro2 {
-    margin: 0;
-    background: gray;
-}
 .intro1 {
     height: 39vh;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
+.intro2 {
+    padding: 0 5%;
+}
 #intro h1 {
+    margin-right: 15%;
     font-weight: 700;
 }
-#intro p {
-}
+
 
 @media screen and (min-width: 33em){
     #intro{
         flex-direction: row;
         height: 82vh;
-        align-items: center;
     }  
     .intro1, .intro2 {
-        width:50%;
         height: 100%;
     }
     .intro1 {
+        width: calc(100% - (16em - 15%));
     }
     .intro2 {
+        width: calc(16em + 15%);
+        padding: 0;
+        padding-right: 6%;
         display: flex;
         flex-direction: column;
-        align-items: baseline;
-    }
-    #intro h1{
-        margin-right: 1em;
+        justify-content: center;
     }
 }
 @media screen and (min-width: 50em){
