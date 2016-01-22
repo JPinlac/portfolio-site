@@ -30,18 +30,19 @@ a:hover {
     Masthead
     ---------------------*/
 #navbar {
+    z-index: 150;
     display: flex;
     align-items: center;
     flex-flow: column wrap;
+    justify-content: center;
     text-align: center;
     padding: 0 1em 1em 1em;
     height: 100vh;
     background: #060606;
     transition: background 1s;
-    justify-content: center;
     color: #55C34D;
 }
-#navbar.normal{
+#navbar.normal {
     background: #ececec;
     color: #333;
 }
@@ -126,18 +127,26 @@ a:hover {
     text-decoration: none;
 }
 
-/*corrects user agent styling*/
 nav ul{
     margin: 0;
     margin-left: -40px;
     opacity: 0;
     transition: opacity 1s cubic-bezier(.90, .08, 1, .14);
 }
+#navbar.sticky ul {
+    /*margin-right: calc(1em + 17px);*/
+}
 
 @media screen and (min-width: 33em){
     #navbar {
         flex-flow: row wrap;
         justify-content: space-between;
+    }
+    #navbar.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
     }
     .brand {
         text-align: left;
