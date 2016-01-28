@@ -5,7 +5,7 @@ navbar.delay(3000).queue(function(next){
   $('#type-helper').addClass('normal');
   $('#title').addClass('show');
   $(this).removeAttr('style');
-  if ($(window).width() / parseFloat($('body').css('font-size')) <= 32){
+  if ($('#navbar').css('flex-flow') == 'column wrap'){
     $('nav ul').addClass('show');
   }
   next();
@@ -17,7 +17,7 @@ var curHeight = navbar.height();
 var autoHeight = navbar.css('height', 'auto').height();
 navbar.height(curHeight).animate({height: autoHeight}, 1000, function(){
   $(this).removeAttr('style');
-  if ($(window).width() / parseFloat($('body').css('font-size')) > 32){
+  if ($('#navbar').css('flex-flow') == 'row wrap'){
     $(this).css('align-items', 'flex-end');
   }
   $(this).css('height', 'auto');
@@ -26,7 +26,7 @@ navbar.height(curHeight).animate({height: autoHeight}, 1000, function(){
 
 // fix for full screen navbar intro breaking normal responsive design
 $(window).on('resize', function(){
-  if($(this).width() / parseFloat($('body').css('font-size')) <= 32){
+  if ($('#navbar').css('flex-flow') == 'column wrap'){
     navbar.css('align-items', 'center');
   }
   else {
