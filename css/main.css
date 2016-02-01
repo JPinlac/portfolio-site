@@ -52,7 +52,9 @@ a:hover {
 .show {
     opacity:1 !important;
 }
-
+#title a:link{
+    text-decoration: none;
+}
 #navbar p {
     padding-right: .6rem;
     margin-top: 0;
@@ -109,7 +111,7 @@ a:hover {
     list-style-type: none;
 }
 
-#navbar a {
+#navbar nav a {
     display: block;
     width: 6.25em;
     height: 2.5em;
@@ -141,7 +143,7 @@ nav ul{
     .brand {
         text-align: left;
     }
-    #navbar a {
+    #navbar nav a {
         line-height: 2.2em;
         display:inline;
         border-right: none;
@@ -150,7 +152,6 @@ nav ul{
         content: ' | ';
         padding: 0 1em;
     }
-
 }
 
 @media screen and (min-width: 50em){
@@ -195,7 +196,7 @@ nav ul{
     #intro{
         flex-direction: row;
         height: 82vh;
-    }  
+    }
     .intro1, .intro2 {
         height: 100%;
     }
@@ -214,5 +215,7 @@ nav ul{
 @media screen and (min-width: 50em){
     #intro{
         height: 86vh;
+        width: 80%;
+        margin: 0 auto;
     }
 }
