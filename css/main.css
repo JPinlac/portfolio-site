@@ -178,7 +178,7 @@ nav ul{
     font-family: Arial;
 }
 .intro1 {
-    height: 65vh;
+    height: 20em;
     display: flex;
     justify-content: flex-start;
     /*align-items: center;*/
@@ -199,7 +199,7 @@ nav ul{
 @media screen and (min-width: 33em){
     #intro{
         flex-direction: row;
-        height: 82vh;
+        height: 30em;
     }
     .intro1, .intro2 {
         height: 100%;
@@ -218,8 +218,8 @@ nav ul{
 }
 @media screen and (min-width: 50em){
     #intro{
-        height: 86vh;
-        width: 50em;
+        /*height: 86vh;*/
+        width: calc(50em - 17px); /* minus width of scroll bar */
         margin: 0 auto;
     }
 }
