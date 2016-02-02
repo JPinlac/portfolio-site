@@ -178,16 +178,20 @@ nav ul{
     font-family: Arial;
 }
 .intro1 {
-    height: 39vh;
+    height: 65vh;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: flex-start;
+    /*align-items: center;*/
 }
 .intro2 {
     padding: 0 5%;
+    display: flex;
+    flex-flow: column wrap;
+    /*align-items: flex-end;*/
+
 }
 #intro h1 {
-    margin-right: 15%;
+    margin: 1em 0 0 1em;
     font-weight: 700;
 }
 
@@ -206,16 +210,16 @@ nav ul{
     .intro2 {
         width: calc(16em + 15%);
         padding: 0;
-        padding-right: 6%;
+        padding-right: 1em;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
     }
 }
 @media screen and (min-width: 50em){
     #intro{
         height: 86vh;
-        width: 80%;
+        width: 50em;
         margin: 0 auto;
     }
 }
