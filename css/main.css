@@ -232,3 +232,11 @@ nav ul{
     padding-top: 3em;
     border-top: 1px solid #bbb;
 }
+.project {
+    height: 15em;
+    width:; 10em;
+}
+.project-container {
+    display: flex;
+    justify-content: space-around;
+}
