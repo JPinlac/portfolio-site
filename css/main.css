@@ -3,7 +3,7 @@
     =====================*/
 body {
     font-family: 'Inconsolata', 'Courier New', monospace;
-    background-color: #ececec;
+    background: #f3f3f3;
     color: #333;
 }
 
@@ -229,12 +229,14 @@ nav ul{
     ---------------------*/
 #projects {
     text-align: center;
-    padding-top: 3em;
     border-top: 1px solid #bbb;
+}
+#projects h1 {
+    padding: 2em 0 1em 0;
 }
 .project {
     height: 15em;
-    width:; 10em;
+    width: 10em;
 }
 .project-container {
     display: flex;
