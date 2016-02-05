@@ -206,6 +206,14 @@ nav ul{
     margin: 1em 0 0 1em;
     font-weight: 700;
 }
+#intro p {
+    margin: 0;
+    margin-top: 1em;
+}
+
+#intro p:last-child {
+    margin-bottom: 2em;
+}
 
 @media screen and (min-width: 33em){
 
@@ -249,27 +257,32 @@ nav ul{
 }
 
 #projects h1 {
-    padding: 2em 0 1em 0;
+    padding: 2em 0 0 0;
+}
+.project-container {
+    margin: 2em 0;
 }
 
 #portfolio-container {
     display: flex;
     justify-content: flex-end;
 }
-
 #cheers-container {
     display: flex;
     justify-content: flex-start;
+    margin-top: 7em;
 }
 
 .project {
-    width: 80%;
-    height: 90%;
-    background: #020212;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    background: #ececec;
 }
 
-#projects img {
-    
+.project-info {
+    text-align: left;
+    padding: 0 1em;
 }
 
 /* slide in effect */
@@ -290,4 +303,15 @@ nav ul{
 .already-visible {
     transform: translateX(0);
     animation: none;
+}
+
+@media screen and (min-width: 33em){
+    .project {
+        width: 80%;
+    }
+}
+@media screen and (min-width: 50em){
+    .project {
+        flex-flow: row nowrap;
+    }
 }
