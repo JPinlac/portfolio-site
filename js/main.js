@@ -63,17 +63,17 @@ $(window).on('resize', function(){
 })(jQuery);
 
 
-// scroll jacking
+// scroll events
 var $intro = $('intro');
 var $win = $(window);
 var $projects = $('.project');
 
 $projects.each(function(i,el){
-    var el = $(el);
-    if (el.visible(true)) {
-      el.addClass('already-visible')
-    }
-  });
+  var el = $(el);
+  if (el.visible(true)) {
+    el.addClass('already-visible');
+  }
+});
 
 $win.scroll(function(){
   // sticky navbar

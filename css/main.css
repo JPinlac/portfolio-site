@@ -10,6 +10,7 @@ body {
 a:link, a:visited {
     color: #333;
 }
+
 a:hover {
     opacity: .7;
 }
@@ -28,13 +29,14 @@ a:hover {
     flex-flow: column wrap;
     justify-content: center;
     text-align: center;
-    padding: 0 1em 1em 1em;
+    padding: 0 1em .5em 1em;
     height: 100vh;
     background: #060606;
     transition: background 1s;
     color: #55C34D;
     border-bottom: 1px solid #bbb;
 }
+
 #navbar.normal {
     background: #ececec;
     color: #333;
@@ -45,22 +47,49 @@ a:hover {
     margin-bottom: 10px;
     white-space: nowrap;
 }
+
 #title{
     opacity: 0;
     transition: opacity 1s;
 }
+
 .show {
     opacity:1 !important;
 }
+
 #title a:link{
     text-decoration: none;
 }
+
 #navbar p {
     padding-right: .6rem;
     margin-top: 0;
     margin-bottom: 8px;
     white-space: nowrap;
     position: relative;
+}
+
+#navbar li{
+    display: inline-block;
+    list-style-type: none;
+}
+
+#navbar nav a {
+    display: block;
+    width: 6.25em;
+    height: 2.5em;
+    padding: 0 5px;
+    line-height: 2.5em;
+    border-bottom: 1px solid #074354;
+    border-right: 1px solid #074354;
+    text-decoration: none;
+}
+
+nav ul{
+    margin: 0;
+    margin-left: -40px;
+    opacity: 0;
+    transition: opacity 1s cubic-bezier(.90, .08, 1, .14);
 }
 
 /*typing effect*/
@@ -106,48 +135,30 @@ a:hover {
     50% {background-color: #333;}
 }
 
-#navbar li{
-    display: inline-block;
-    list-style-type: none;
-}
-
-#navbar nav a {
-    display: block;
-    width: 6.25em;
-    height: 2.5em;
-    padding: 0 5px;
-    line-height: 2.5em;
-    border-bottom: 1px solid #074354;
-    border-right: 1px solid #074354;
-    text-decoration: none;
-}
-
-nav ul{
-    margin: 0;
-    margin-left: -40px;
-    opacity: 0;
-    transition: opacity 1s cubic-bezier(.90, .08, 1, .14);
-}
-
 @media screen and (min-width: 33em){
+
     #navbar {
         flex-flow: row wrap;
         justify-content: space-between;
     }
+
     #navbar.sticky {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
     }
+
     .brand {
         text-align: left;
     }
+
     #navbar nav a {
         line-height: 2.2em;
         display:inline;
         border-right: none;
     }
+
     #navbar li + li:before {
         content: ' | ';
         padding: 0 1em;
@@ -155,11 +166,13 @@ nav ul{
 }
 
 @media screen and (min-width: 50em){
+
     .brand {
         display:flex;
         flex-direction: rows;
         align-items: baseline;
     }
+
     #title-desc {
         margin-left: 1em;
     }
@@ -177,36 +190,38 @@ nav ul{
     color: #FFFFFF;
     font-family: Arial;
 }
+
 .intro1 {
     height: 20em;
     display: flex;
     justify-content: flex-start;
-    /*align-items: center;*/
 }
+
 .intro2 {
     padding: 0 5%;
     display: flex;
     flex-flow: column wrap;
-    /*align-items: flex-end;*/
-
 }
 #intro h1 {
     margin: 1em 0 0 1em;
     font-weight: 700;
 }
 
-
 @media screen and (min-width: 33em){
+
     #intro{
         flex-direction: row;
         height: 30em;
     }
+
     .intro1, .intro2 {
         height: 100%;
     }
+
     .intro1 {
         width: calc(100% - (16em - 15%));
     }
+
     .intro2 {
         width: calc(16em + 15%);
         padding: 0;
@@ -217,6 +232,7 @@ nav ul{
     }
 }
 @media screen and (min-width: 50em){
+
     #intro{
         /*height: 86vh;*/
         width: calc(50em - 17px); /* minus width of scroll bar */
@@ -231,23 +247,29 @@ nav ul{
     text-align: center;
     border-top: 1px solid #bbb;
 }
+
 #projects h1 {
     padding: 2em 0 1em 0;
 }
-.portfolio-container {
-    height: 15em;
+
+#portfolio-container {
     display: flex;
     justify-content: flex-end;
 }
-.cheers-container {
-    height: 15em;
+
+#cheers-container {
     display: flex;
     justify-content: flex-start;
 }
+
 .project {
     width: 80%;
     height: 90%;
     background: #020212;
+}
+
+#projects img {
+    
 }
 
 /* slide in effect */
