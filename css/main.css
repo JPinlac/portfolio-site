@@ -234,11 +234,38 @@ nav ul{
 #projects h1 {
     padding: 2em 0 1em 0;
 }
-.project {
+.portfolio-container {
     height: 15em;
-    width: 10em;
-}
-.project-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+}
+.cheers-container {
+    height: 15em;
+    display: flex;
+    justify-content: flex-start;
+}
+.project {
+    width: 80%;
+    height: 90%;
+    background: #020212;
+}
+
+/* slide in effect */
+#portfolio.project.come-in {
+    transform: translateX(-50em);
+    animation: come-in 1.2s ease forwards;
+}
+#cheers.project.come-in {
+    transform: translateX(50em);
+    animation: come-in 1.2s ease forwards;
+}
+@-webkit-keyframes "come-in" {
+    to { transform: translateX(0); }
+}
+@keyframes "come-in" {
+    to { transform: translateX(0); }
+}
+.already-visible {
+    transform: translateX(0);
+    animation: none;
 }

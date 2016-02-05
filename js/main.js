@@ -62,10 +62,22 @@ $(window).on('resize', function(){
   }; 
 })(jQuery);
 
-var $intro = $('intro')
-// sticky navbar
-$(window).scroll(function(){
-  if($(this).scrollTop() > 0) {
+
+// scroll jacking
+var $intro = $('intro');
+var $win = $(window);
+var $projects = $('.project');
+
+$projects.each(function(i,el){
+    var el = $(el);
+    if (el.visible(true)) {
+      el.addClass('already-visible')
+    }
+  });
+
+$win.scroll(function(){
+  // sticky navbar
+  if($win.scrollTop() > 0) {
     if($navbar.css('flex-flow') == 'row wrap'){
       $intro.css('margin-top', $navbar.height());
     }
@@ -76,5 +88,14 @@ $(window).scroll(function(){
     }
     $navbar.removeClass('sticky');
   }
+
+  // slide in
+  $projects.each(function(i,el){
+    var el = $(el);
+    if(el.visible(true)){
+      el.addClass('come-in');
+    }
+  });
+
 });
 
