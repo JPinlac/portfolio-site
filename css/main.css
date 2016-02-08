@@ -186,7 +186,7 @@ nav ul{
     position: relative;
     display: flex;
     flex-direction: column;
-    background: #053542;
+    background: #446CB3;
     color: #FFFFFF;
     font-family: Arial;
 }
@@ -253,7 +253,6 @@ nav ul{
     ---------------------*/
 #projects {
     text-align: center;
-    border-top: 1px solid #bbb;
 }
 
 #projects h1 {
@@ -278,13 +277,27 @@ nav ul{
 .project {
     display: flex;
     flex-flow: column nowrap;
+    position: relative;
     width: 100%;
-    background: #ececec;
+    background: #cfd9ec;
 }
 
 .project-info {
     text-align: left;
     padding: 0 1em;
+}
+
+.link-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 3em;
+    width: 3em;
+    background: #446CB3;
+}
+
+.project-info p:last-child {
+    padding-bottom: 3em;
 }
 
 /* slide in effect */
@@ -317,4 +330,33 @@ nav ul{
     .project {
         flex-flow: row nowrap;
     }
+    .project-info p:last-child {
+        padding-bottom: 2em;
+    }
+}
+@media screen and (min-width: 75em) {
+    #projects {
+        margin: 0 auto;
+        width: 75em;
+    }
+}
+/* ---------------------
+    contact
+    ---------------------*/
+#contact {
+    margin: 4em 0 8em 0;
+    text-align: center;
+}
+
+#contact a {
+    text-decoration: none;
+}
+
+.contact-link {
+    height: 5em;
+    width: 5em;
+}
+
+.contact-link path {
+    fill: #446CB3;
 }
