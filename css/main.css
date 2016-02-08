@@ -15,6 +15,10 @@ a:hover {
     opacity: .7;
 }
 
+.headline {
+    width: 8em;
+    border-bottom: 5px solid #00d6ce;
+}
 /* =====================
     Element level styling
     =====================*/
