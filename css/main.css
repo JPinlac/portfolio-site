@@ -16,9 +16,11 @@ a:hover {
 }
 
 .headline {
-    width: 8em;
-    border-bottom: 5px solid #00d6ce;
+    margin: 0 auto;
+    width: 6em;
+    border-bottom: 5px solid #333;
 }
+
 /* =====================
     Element level styling
     =====================*/
@@ -193,6 +195,7 @@ nav ul{
     background: #446CB3;
     color: #FFFFFF;
     font-family: Arial;
+    overflow: hidden;
 }
 
 .intro1 {
@@ -209,14 +212,152 @@ nav ul{
 #intro h1 {
     margin: 1em 0 0 1em;
     font-weight: 700;
+    z-index: 5;
 }
 #intro p {
     margin: 0;
     margin-top: 1em;
+    z-index: 5;
 }
 
 #intro p:last-child {
     margin-bottom: 2em;
+}
+
+.scrolling-bars {
+    position:relative;
+    transform: rotate(-60deg);
+    z-index: 1;
+    margin-left: -230px;
+    margin-top: -10px;
+}
+.scrolling-bars div {
+    position: absolute;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.scrolling-bars .bar1 {
+    left: 245px;
+    bottom: -60px;
+    width: 60px;
+    height: 2px;
+    background: rgba(0,214,206, .4);
+    -webkit-animation: slide-bar 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    animation: slide-bar 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+.scrolling-bars .bar2 {
+    left: 208px;
+    bottom: -150px;
+    width: 100px;
+    height: 8px;
+    background: rgba(0,214,206, .4);
+    -webkit-animation: slide-bar 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    animation: slide-bar 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+.scrolling-bars .bar3 {
+    left: 155px;
+    bottom: -115px;
+    width: 155px;
+    height: 30px;
+    background: rgba(0,214,206, .4);
+    -webkit-animation: slide-bar 7s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    animation: slide-bar 7s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+.scrolling-bars .bar4 {
+    left: 108px;
+    bottom: -165px;
+    width: 200px;
+    height: 2px;
+    background: rgba(0,214,206, .4);
+    -webkit-animation: slide-bar 8s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    animation: slide-bar 8s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+.scrolling-bars .bar5 {
+    left: -70px;
+    bottom: -190px;
+    width: 330px;
+    height: 12px;
+    background: rgba(0,214,206, .4);
+    -webkit-animation: slide-bar 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    animation: slide-bar 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+.scrolling-bars .bar6 {
+    left: -430px;
+    bottom: -190px;
+    width: 120px;
+    height: 12px;
+    background: rgba(0,214,206, .4);
+    -webkit-animation: slide-bar 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    animation: slide-bar 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+.scrolling-bars .bar7 {
+    left: -440px;
+    bottom: -115px;
+    width: 450px;
+    height: 30px;
+    background: rgba(0,214,206, .4);
+    -webkit-animation: slide-bar 12s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    animation: slide-bar 12s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+.scrolling-bars .bar8 {
+    left: 20px;
+    bottom: -60px;
+    width: 170px;
+    height: 2px;
+    background: rgba(0,214,206, .4);
+    -webkit-animation: slide-bar 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    animation: slide-bar 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+.scrolling-bars .bar9 {
+    left: -350px;
+    bottom: -60px;
+    width: 260px;
+    height: 2px;
+    background: rgba(0,214,206, .4);
+    -webkit-animation: slide-bar 7s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    animation: slide-bar 7s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+.scrolling-bars .bar10 {
+    left: -360px;
+    bottom: -165px;
+    width: 370px;
+    height: 2px;
+    background: rgba(0,214,206, .4);
+    -webkit-animation: slide-bar 11s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    animation: slide-bar 11s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+.scrolling-bars .bar11 {
+    left: -235px;
+    bottom: -47px;
+    width: 165px;
+    height: 12px;
+    background: rgba(0,214,206, .4);
+    -webkit-animation: slide-bar 9s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    animation: slide-bar 9s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+.scrolling-bars .bar12 {
+    left: 245px;
+    bottom: -60px;
+    width: 60px;
+    height: 20px;
+    background: rgba(0,214,206, .4);
+    -webkit-animation: slide-bar 5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    animation: slide-bar 5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+@-webkit-keyframes slide-bar {
+  0% {
+            transform: translateX(-1600px);
+  }
+  100% {
+            transform: translateX(1600px);
+  }
+}
+@keyframes slide-bar {
+  0% {
+            transform: translateX(-1600px);
+  }
+  100% {
+            transform: translateX(1600px);
+  }
 }
 
 @media screen and (min-width: 33em){
@@ -231,16 +372,20 @@ nav ul{
     }
 
     .intro1 {
-        width: calc(100% - (16em - 15%));
+        width: calc(100% - (18em - 15%));
     }
 
     .intro2 {
-        width: calc(16em + 15%);
+        width: calc(18em + 15%);
         padding: 0;
         padding-right: 1em;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+    }
+
+    .scrolling-bars {
+        margin-left: -350px;
     }
 }
 @media screen and (min-width: 50em){
@@ -256,6 +401,10 @@ nav ul{
     ---------------------*/
 #projects {
     text-align: center;
+}
+
+#projects .headline {
+    width: 4em;
 }
 
 #projects h1 {
@@ -345,6 +494,10 @@ nav ul{
 #contact {
     margin: 4em 0 8em 0;
     text-align: center;
+}
+
+#contact .headline {
+    width: 5em;
 }
 
 #contact a {
