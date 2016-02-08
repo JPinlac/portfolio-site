@@ -68,24 +68,11 @@ var $intro = $('intro');
 var $win = $(window);
 var $projects = $('.project');
 
-$projects.each(function(i,el){
-  var el = $(el);
-  if (el.visible(true)) {
-    el.addClass('already-visible');
-  }
-});
-
 $win.scroll(function(){
   // sticky navbar
   if($win.scrollTop() > 0) {
-    if($navbar.css('flex-flow') == 'row wrap'){
-      $intro.css('margin-top', $navbar.height());
-    }
     $navbar.addClass('sticky');
   } else {
-    if($navbar.css('flex-flow') == 'column wrap'){
-      $intro.css('margin-top', 0);
-    }
     $navbar.removeClass('sticky');
   }
 
@@ -99,18 +86,19 @@ $win.scroll(function(){
 
 });
 
+// smooth scroll
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       var adjustHeight = 0; //adjustment for sticky navbar document flow
-      if($win.scrollTop() == 0) {
-        adjustHeight = $navbar.height();
+      if($win.scrollTop() == 0 && $('.brand').css('align-items') == 'baseline') {
+        adjustHeight = $navbar.height() + 30;
       }
       if (target.length) {
         $('html, body').animate({
-          scrollTop: (target.offset().top - adjustHeight -20)
+          scrollTop: (target.offset().top - adjustHeight)
         }, 1000);
         return false;
       }

@@ -142,13 +142,6 @@ nav ul{
         justify-content: space-between;
     }
 
-    #navbar.sticky {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
-
     .brand {
         text-align: left;
     }
@@ -166,6 +159,13 @@ nav ul{
 }
 
 @media screen and (min-width: 50em){
+
+    #navbar.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
 
     .brand {
         display:flex;
@@ -242,7 +242,6 @@ nav ul{
 @media screen and (min-width: 50em){
 
     #intro{
-        /*height: 86vh;*/
         width: calc(50em - 17px); /* minus width of scroll bar */
         margin: 0 auto;
     }
@@ -314,10 +313,6 @@ nav ul{
 }
 @keyframes "come-in" {
     to { transform: translateX(0); }
-}
-.already-visible {
-    transform: translateX(0);
-    animation: none;
 }
 
 @media screen and (min-width: 33em){
