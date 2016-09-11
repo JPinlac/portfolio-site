@@ -13,7 +13,7 @@
     <link rel='stylesheet' href='css/dist.css'>
 </head>
 <body>
-
+    <button onclick='goBack()' class='back'>Go back</button>
     <header id='navbar'>
         <div class='brand'>
             <h3 id='title'><a href='#intro'>Jonathan Pinlac</a></h3>
@@ -120,7 +120,8 @@
                 </svg>
             </a>
     </footer>
-
+    
+    <script> function goBack(){ window.history.back();}</script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js'></script>
     <script src='js/dist.js'></script>
 </body>
